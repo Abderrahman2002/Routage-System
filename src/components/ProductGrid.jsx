@@ -1,8 +1,12 @@
 import './ProductGrid.css'; // Ensure you import the CSS file
+import image6 from '../images/image6.webp';
+import image5 from '../images/image5.webp';
+import image10 from '../images/image10.webp';
+import image9 from '../images/image9.webp';
 
 const ProductGrid = () => {
 	const products = [
-		{ id: 1, name: 'SETUP GAMER R7 3700X-RTX 4060 + 275F + HPG200', price: '$800.00', sale: false, image: '/images/image6.webp' },
+		{ id: 1, name: 'SETUP GAMER R7 3700X-RTX 4060 + 275F + HPG200', price: '$800.00', sale: false, image: image6 },
 		{
 			id: 2,
 			name: 'SETUP GAMER R7 3700X-RTX 4060Ti 16Go + G274QPF E2 + HPG100',
@@ -10,18 +14,18 @@ const ProductGrid = () => {
 			salePrice: '$1300.00',
 			originalPrice: '$2000.00',
 			sale: true,
-			image: '/images/image7.webp'
+			image: image5
 		},
 		{
 			id: 3,
 			name: 'SETUP GAMER R7 3700X-RTX 3050 + HP27IFL + HPG200',
 			price: '$500.00',
 			salePrice: '$250.00',
-			originalPrice: '$500.00',
+				originalPrice: '$500.00',
 			sale: true,
-			image: '/images/image10.webp'
+			image: image10
 		},
-		{ id: 4, name: 'SETUP GAMER R7 3700X-RX 580 + CL27FF + HPG200', price: '$3000.00', sale: false, image: '/images/image9.webp' }
+		{ id: 4, name: 'SETUP GAMER R7 3700X-RX 580 + CL27FF + HPG200', price: '$3000.00', sale: false, image: image9 }
 	];
 
 	return (
