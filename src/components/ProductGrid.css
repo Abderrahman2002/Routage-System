@@ -6,6 +6,30 @@
     gap: 15px; /* Espace entre les cartes de produits */
 }
 
+/* Animation d'entrée */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Déplace légèrement vers le bas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Retourne à la position d'origine */
+    }
+}
+
+/* Animation de sortie */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px); /* Déplace légèrement vers le haut */
+    }
+}
+
 .product-card {
     border: 1px solid #ccc; /* Optionnel : ajouter une bordure */
     border-radius: 8px; /* Optionnel : coins arrondis */
@@ -13,7 +37,9 @@
     text-align: center; /* Centre le texte */
     padding: 10px; /* Rembourrage autour du contenu */
     background-color: #f9f9f9; /* Couleur de fond */
-    width: 400px; /* Largeur fixe pour l'uniformité */
+    width: 350px; /* Largeur fixe pour l'uniformité */
+    margin: 10px;
+    animation: fadeIn 0.5s ease; /* Animation d'entrée */
 }
 
 .product-image {
@@ -22,6 +48,13 @@
     max-height: 250px; /* Limite la hauteur de l'image */
     object-fit: cover; /* Recadre l'image pour s'adapter */
     margin: 0 auto; /* Centre l'image horizontalement */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition pour l'animation */
+    opacity: 0.8; /* Opacité initiale */
+}
+
+.product-image:hover {
+    transform: scale(1.1); /* Agrandit l'image au survol */
+    opacity: 1; /* Rend l'image complètement opaque au survol */
 }
 
 .product-info {

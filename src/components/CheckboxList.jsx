@@ -16,6 +16,9 @@ const CheckboxList = () => {
     setItems(updatedItems);
   };
 
+  // Create a list of checked items
+  const checkedItems = items.filter(item => item.completed);
+
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-bold text-center mb-4">Checkbox List</h1>
@@ -35,6 +38,18 @@ const CheckboxList = () => {
           </li>
         ))}
       </ul>
+
+      {/* Display checked items */}
+      {checkedItems.length > 0 && (
+        <div className="mt-4">
+          <h2 className="text-xl font-semibold">Checked Items:</h2>
+          <ul className="list-disc list-inside">
+            {checkedItems.map(item => (
+              <li key={item.id} className="text-gray-800">{item.content}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
