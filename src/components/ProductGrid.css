@@ -1,0 +1,48 @@
+/* src/components/ProductGrid.css */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les cartes de produits */
+    gap: 15px; /* Espace entre les cartes de produits */
+}
+
+.product-card {
+    border: 1px solid #ccc; /* Optionnel : ajouter une bordure */
+    border-radius: 8px; /* Optionnel : coins arrondis */
+    overflow: hidden; /* Empêche le débordement du contenu */
+    text-align: center; /* Centre le texte */
+    padding: 10px; /* Rembourrage autour du contenu */
+    background-color: #f9f9f9; /* Couleur de fond */
+    width: 400px; /* Largeur fixe pour l'uniformité */
+}
+
+.product-image {
+    width: 100%; /* L'image prend 100% de la largeur de la carte */
+    height: auto; /* Maintient le ratio d'aspect */
+    max-height: 250px; /* Limite la hauteur de l'image */
+    object-fit: cover; /* Recadre l'image pour s'adapter */
+    margin: 0 auto; /* Centre l'image horizontalement */
+}
+
+.product-info {
+    margin-top: 10px; /* Espace entre l'image et le texte */
+}
+
+.sale-price {
+    color: red; /* Met en évidence le prix de vente */
+    font-weight: bold; /* Met en gras */
+}
+
+.buy-button {
+    background-color: #007bff; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprime la bordure */
+    padding: 8px 12px; /* Rembourrage pour le bouton */
+    border-radius: 5px; /* Coins arrondis pour le bouton */
+    cursor: pointer; /* Curseur pointeur au survol */
+    margin-top: 5px; /* Espace au-dessus du bouton */
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Teinte plus foncée au survol */
+}
